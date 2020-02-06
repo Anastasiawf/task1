@@ -1,0 +1,48 @@
+mkdir task1
+cd task1
+touch example
+git init
+git status
+git add .
+git status
+git config --global user.user "Anastasiawf"
+git commit -m "first"
+git remote add origin https://github.com/Anastasiawf/task1.git
+git push -u origin master
+git checkout -b develop
+git checkout -b develop_1
+git push origin develop
+git push origin develop_1
+echo First string  > example
+git add example
+git commit -m "add first string"
+git push origin develop_1
+git clone https://github.com/Anastasiawf/task1 ~/clone_task1
+cd ..
+cd clone_task1/
+git checkout develop
+git checkout -b develop_2
+echo First string in clone repo > example
+git add example 
+git commit -m "add first string in clone repo"
+git push origin develop_2
+cd ..
+cd task1
+git checkout develop
+git merge develop_1
+git merge develop_2
+git add example 
+git commit -m "Resolve conflict"
+git push origin develop
+touch commands
+
+
+
+
+
+
+
+
+
+
+
